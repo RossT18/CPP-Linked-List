@@ -10,6 +10,10 @@ int Node::getData() {
 	return data;
 }
 
+bool Node::hasNext() {
+	return next != NULL;
+}
+
 void Node::setData(int d) {
 	data = d;
 }

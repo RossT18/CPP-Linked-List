@@ -1,6 +1,7 @@
 #pragma once
 #include "Node.h"
 #include <cstddef>
+#include <iostream>
 
 class LinkedList
 {
@@ -8,9 +9,10 @@ class LinkedList
 		Node* head;
 		int length;
 	public:
-		LinkedList();
+		LinkedList(Node* h = NULL);
 		int push(int data);
 		int getLength();
+		void printList();
 		Node getHead();
 		Node* getHeadPointer();
 };

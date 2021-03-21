@@ -3,11 +3,20 @@
 #include <iostream>
 #include <cstddef>
 #include "Node.h"
+#include "LinkedList.h"
 
 using namespace std;
 
-int main()
-{
+int pushTest(LinkedList* ll) {
+    ll->push(2021);
+    ll->push(2022);
+    ll->push(2023);
+    ll->push(2024);
+
+    return ll->getLength();
+}
+
+void nodeTests() {
     Node myNode = Node(2021);
     Node myNode2 = Node(2020, &myNode);
     cout << myNode.getData() << endl;
@@ -22,6 +31,14 @@ int main()
 
     cout << nextNodeVal << endl;
     cout << nextNodeVal2 << endl;
+}
+
+int main()
+{
+    LinkedList* myLinkedList = new LinkedList();
+
+    int length = pushTest(myLinkedList);
+    myLinkedList->printList();
 
     return 0;
 }

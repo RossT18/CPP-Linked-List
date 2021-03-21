@@ -9,6 +9,7 @@ class Node
 	public:
 		Node(int d, Node* n = NULL);
 		int getData();
+		bool hasNext();
 		Node* getNext();
 		void setData(int d);
 		void setNext(Node* n);
