@@ -32,6 +32,33 @@ int LinkedList::push(int data) {
 	return length;
 }
 
+int LinkedList::pop() {
+	if (head == NULL) {
+		cout << "Cannot pop empty Linked List" << endl;
+		return NULL;
+	}
+	else if (!head->hasNext()) {
+		int data = head->getData();
+		head = NULL;
+		length--;
+		return data;
+	}
+
+	Node* current = head;
+	Node* previous = current;
+
+	while (current->hasNext()) {
+		previous = current;
+		current = current->getNext();
+	}
+
+	previous->setNext(NULL);
+
+	length--;
+
+	return current->getData();
+}
+
 void LinkedList::printList() {
 
 	if (head == NULL) {

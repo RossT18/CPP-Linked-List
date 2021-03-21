@@ -7,7 +7,7 @@ This is my first C++ project.
 ## Part 1 - C++ Linked List Implementation
 ### Goals
  ✔ Push items
- ❌ Pop items
+ ✔ Pop items
  ✔ Output lists
  ❌ Item search
  ❌ Item insertion

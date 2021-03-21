@@ -40,5 +40,10 @@ int main()
     int length = pushTest(myLinkedList);
     myLinkedList->printList();
 
+    myLinkedList->pop();
+
+    myLinkedList->printList();
+
+
     return 0;
 }

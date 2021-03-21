@@ -11,6 +11,7 @@ class LinkedList
 	public:
 		LinkedList(Node* h = NULL);
 		int push(int data);
+		int pop();
 		int getLength();
 		void printList();
 		Node getHead();
