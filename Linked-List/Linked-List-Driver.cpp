@@ -2,11 +2,15 @@
 //
 
 #include <iostream>
+#include <cstddef>
+#include "Node.h"
+
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+    Node myNode = Node(2021);
+    cout << myNode.getData() << endl;
     return 0;
 }
