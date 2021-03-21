@@ -16,5 +16,6 @@ class LinkedList
 		void printList();
 		Node getHead();
 		Node* getHeadPointer();
+		bool contains(int d);
 };
 

@@ -9,7 +9,7 @@ This is my first C++ project.
  ✔ Push items
  ✔ Pop items
  ✔ Output lists
- ❌ Item search
+ ✔ Item search
  ❌ Item insertion
  ❌ Item removal
  ❌ Sorting

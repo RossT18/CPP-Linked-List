@@ -90,3 +90,24 @@ Node LinkedList::getHead() {
 Node* LinkedList::getHeadPointer() {
 	return head;
 }
+
+bool LinkedList::contains(int d) {
+	if (head == NULL) {
+		cout << "Linked List is empty" << endl;
+		return false;
+	}
+
+	Node* current = head;
+	while (current->hasNext()) {
+		int currentD = current->getData();
+		if (currentD == d) {
+			return true;
+		}
+		current = current->getNext();
+	}
+	if (current->getData() == d) {
+		return true;
+	}
+
+	return false;
+}

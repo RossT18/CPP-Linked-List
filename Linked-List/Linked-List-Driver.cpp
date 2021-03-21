@@ -44,6 +44,10 @@ int main()
 
     myLinkedList->printList();
 
+    cout << myLinkedList->contains(2021) << endl;
+    cout << myLinkedList->contains(2022) << endl;
+    cout << myLinkedList->contains(2023) << endl;
+    cout << myLinkedList->contains(2024) << endl;
 
     return 0;
 }
