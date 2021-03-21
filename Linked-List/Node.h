@@ -7,9 +7,9 @@ class Node
 		int data;
 		Node* next;
 	public:
-		Node(int d);
+		Node(int d, Node* n = NULL);
 		int getData();
 		Node* getNext();
 		void setData(int d);
-		void setNext(Node* d);
+		void setNext(Node* n);
 };

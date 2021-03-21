@@ -1,9 +1,9 @@
 #include <cstddef>
 #include "Node.h"
 
-Node::Node(int d) {
+Node::Node(int d, Node* n) {
 	data = d;
-	next = NULL;
+	next = n;
 }
 
 int Node::getData() {
