@@ -40,6 +40,7 @@ int main()
     int length = pushTest(myLinkedList);
     myLinkedList->printList();
 
+
     myLinkedList->pop();
 
     myLinkedList->printList();
@@ -47,7 +48,11 @@ int main()
     cout << myLinkedList->contains(2021) << endl;
     cout << myLinkedList->contains(2022) << endl;
     cout << myLinkedList->contains(2023) << endl;
-    cout << myLinkedList->contains(2024) << endl;
+    cout << myLinkedList->contains(1984) << endl;
+
+    myLinkedList->insert(1984, 0);
+
+    myLinkedList->printList();
 
     return 0;
 }

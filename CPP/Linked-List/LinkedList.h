@@ -17,5 +17,6 @@ class LinkedList
 		Node getHead();
 		Node* getHeadPointer();
 		bool contains(int d);
+		void insert(int d, int pos);
 };
 

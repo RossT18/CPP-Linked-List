@@ -111,3 +111,42 @@ bool LinkedList::contains(int d) {
 
 	return false;
 }
+
+void LinkedList::insert(int d, int pos) {
+	// pos 0 should replace head
+	if (head == NULL && pos > 0) {
+		cout << "Cannot insert after head on empty linked list" << endl;
+		return;
+	}
+	else if (pos > length) {
+		cout << "Cannot insert outside of linked list" << endl;
+		return;
+	}
+	else if (pos == 0) {
+		Node* newNode = new Node(d, head);
+		head = newNode;
+		length++;
+		return;
+	}
+	
+
+	Node* current = head;
+	int currentPos = 0;
+	while (current->hasNext() && currentPos < pos) {
+		// Change pointer of element before point of insertion
+		if (currentPos == pos - 1) {
+			Node* newNode = new Node(d, current->getNext());
+			current->setNext(newNode);
+		}
+
+		current = current->getNext();
+		currentPos++;
+	}
+
+	if (currentPos == pos - 1) {
+		Node* newNode = new Node(d, current->getNext());
+		current->setNext(newNode);
+	}
+
+	length++;
+}
