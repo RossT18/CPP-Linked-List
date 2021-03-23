@@ -24,7 +24,17 @@ class LinkedList:
         self._length = 0
 
     def push(self, data: int) -> int:
-        pass
+        if self._head == None:
+            self._head = Node(data)
+            self._length += 1
+            return
+        
+        current = self._head
+        while current.hasNext():
+            current = current.getNext()
+
+        current.setNext(Node(data))        
+        self._length += 1
 
     def pop(self) -> int:
         pass
@@ -36,7 +46,22 @@ class LinkedList:
         pass
 
     def toString(self) -> str:
-        pass
+        if self._length == 0:
+            return "Linked List is empty"
+        
+        strRepresentation = ""
+
+        current = self._head
+        count = 0
+        while current.hasNext():
+            strRepresentation += f"Item {count + 1}: {current.getData()}\n"
+
+            count += 1
+            current = current.getNext()
+        strRepresentation += f"Item {count + 1}: {current.getData()}\n"
+        strRepresentation += f"Length: {self._length}"
+        return strRepresentation
+
 
     def __str__(self) -> str:
         return self.toString()

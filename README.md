@@ -19,9 +19,9 @@ Create Python library from C++ implementation.
 
 ## Part 3 - Python Linked List Implementation
 ### Goals
- ❌ Push items | 
+ ✔ Push items | 
  ❌ Pop items | 
- ❌ Output lists | 
+ ✔ Output lists | 
  ❌ Item search | 
  ❌ Item insertion | 
  ❌ Item removal | 

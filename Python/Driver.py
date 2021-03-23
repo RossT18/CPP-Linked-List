@@ -1,7 +1,14 @@
 from LinkedList import *
 
 def main():
-    pass
+    myLinkedList = LinkedList()
+
+    myLinkedList.push(2021)
+    myLinkedList.push(2022)
+    myLinkedList.push(2023)
+    myLinkedList.push(2024)
+
+    print(myLinkedList)
 
 if __name__ == "__main__":
     main()
