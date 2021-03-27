@@ -22,7 +22,7 @@ Create Python library from C++ implementation.
  ✔ Push items | 
  ✔ Pop items | 
  ✔ Output lists | 
- ❌ Item search | 
+ ✔ Item search | 
  ❌ Item insertion | 
  ❌ Item removal | 
  ❌ Sorting

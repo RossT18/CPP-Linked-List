@@ -61,7 +61,17 @@ class LinkedList:
         return self._head
 
     def __contains__(self, item: int) -> bool:
-        pass
+        if self._head == None:
+            return False
+
+        current = self._head
+        while current.hasNext():
+            if current.getData() == item:
+                return True
+            current = current.getNext()
+        if current.getData() == item:
+            return True
+        return False
 
     def toString(self) -> str:
         if self._length == 0:
