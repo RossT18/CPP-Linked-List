@@ -20,7 +20,7 @@ Create Python library from C++ implementation.
 ## Part 3 - Python Linked List Implementation
 ### Goals
  ✔ Push items | 
- ❌ Pop items | 
+ ✔ Pop items | 
  ✔ Output lists | 
  ❌ Item search | 
  ❌ Item insertion | 
