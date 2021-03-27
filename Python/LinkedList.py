@@ -37,7 +37,25 @@ class LinkedList:
         self._length += 1
 
     def pop(self) -> int:
-        pass
+        if self._head == None:
+            print("Linked List is empty. Cannot pop")
+            return -1
+        elif not self._head.hasNext():
+            data = self._head.getData()
+            self._head = None
+            self._length -= 1
+            return data
+        
+        current = self._head
+        prev = self._head
+        while current.hasNext():
+            prev = current
+            current = current.getNext()
+        
+        data = current.getData()
+        prev.setNext(None)
+        self._length -= 1
+        return data
 
     def getHead(self) -> Node:
         return self._head
