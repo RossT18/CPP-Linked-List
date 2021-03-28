@@ -14,8 +14,11 @@ def main():
     myLinkedList.push(2023)
     myLinkedList.push(2024)
 
+    myLinkedList.insert(1984, 1)
     
     print(f"2024 in list: {2024 in myLinkedList}")
+
+    print("------")
 
     print(myLinkedList)
 

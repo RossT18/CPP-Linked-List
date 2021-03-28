@@ -90,6 +90,31 @@ class LinkedList:
         strRepresentation += f"Length: {self._length}"
         return strRepresentation
 
+    def insert(self, data: int, pos: int) -> bool:
+        if pos > self._length:
+            print("Cannot insert outside of linked list")
+            return False
+        elif self._head == None and pos == 0:
+            self._head = Node(data)
+            self._length += 1
+            return True
+        elif pos == 0:
+            new_head = Node(data, self._head)
+            self._head = new_head
+            self._length += 1
+            return True
+        
+        current = self._head
+        current_pos = 0
+        while current.hasNext() and current_pos < pos - 1:
+            current = current.getNext()
+            current_pos += 1
+
+        old_next = current.getNext()
+        current.setNext(Node(data, old_next))
+        self._length += 1
+        return True
+            
 
     def __str__(self) -> str:
         return self.toString()
