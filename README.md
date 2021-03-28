@@ -23,8 +23,8 @@ Create Python library from C++ implementation.
  ✔ Pop items | 
  ✔ Output lists | 
  ✔ Item search | 
- ❌ Item insertion | 
- ❌ Item removal | 
+ ✔ Item insertion | 
+ ✔ Item removal | 
  ❌ Sorting
 
 ## Part 4 - Performance Comparison

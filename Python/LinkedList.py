@@ -114,6 +114,28 @@ class LinkedList:
         current.setNext(Node(data, old_next))
         self._length += 1
         return True
+    
+    def remove(self, data: int) -> bool:
+        if self._head == None:
+            print("Cannot remove from empty linked list")
+            return False
+        elif self._head.getData() == data:
+            self._head = self._head.getNext()
+            self._length -= 1
+            return True
+
+        current = self._head
+        previous = current
+        while current.getData() != data and current.hasNext():
+            previous = current
+            current = current.getNext()
+
+        if current.getData() == data:
+            previous.setNext(current.getNext())
+            self._length -= 1
+            return True
+        else:
+            return False
             
 
     def __str__(self) -> str:
